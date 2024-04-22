@@ -1,7 +1,7 @@
 import azure.functions as func
 import logging
 
-app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
+app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION, route_prefix="api")
 
 @app.route(route="hellen_test1")
 def hellen_test1(req: func.HttpRequest) -> func.HttpResponse:
